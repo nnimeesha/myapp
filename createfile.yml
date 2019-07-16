@@ -1,0 +1,13 @@
+---
+- name: Create a new file
+  hosts: all
+  become: true
+  tasks:
+    - name: Create a file in /tmp
+      file:
+        src: /etc/passwd
+        dest: /tmp
+        owner: lnxcfg
+        group: lnxcfg
+        mode: 0755
+        state: file 
