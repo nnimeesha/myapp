@@ -5,8 +5,8 @@
   tasks:
     - name: Create a file in /tmp
       file:
-        src: /etc/passwd
-        dest: /tmp
+        src: /tmp/rekha.template
+        dest: /tmp/template2
         owner: lnxcfg
         group: lnxcfg
         mode: 0755
