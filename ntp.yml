@@ -1,0 +1,14 @@
+---
+- name: Installing ntp on the server
+  hosts: all
+  become: true
+  tasks:
+    - name: Install ntp package
+      yum:
+        name: ntp
+        state: present
+    - name: Start the ntpd service
+      service:
+        name: ntpd
+        state: started
+        enabled: yes
