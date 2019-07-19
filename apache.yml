@@ -5,10 +5,10 @@
     - name: Install Apache
       yum: 
         name: "{{ packages }}"
-       vars:
-         packages:
-         - httpd
-         - httpd-tools  
+      vars:
+        packages:
+        - httpd
+        - httpd-tools  
     - name: Ensure apache started
       service:
         name: httpd
