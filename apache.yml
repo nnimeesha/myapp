@@ -4,11 +4,11 @@
   tasks:
     - name: Install Apache
       yum: 
-        name: "{{ items }}"
-        state: present
-        with_items:
-          - httpd
-          - httpd-tools
+        name: "{{ packages }}"
+       vars:
+         packages:
+         - httpd
+         - httpd-tools  
     - name: Ensure apache started
       service:
         name: httpd
