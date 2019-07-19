@@ -4,8 +4,7 @@
   pre_tasks:
     - name: Update cache if needed.
       yum: 
-        name: cache
-        state: present
+        update_cache: yes
   handlers:
     - name: restart apache
       service:
