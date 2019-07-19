@@ -1,0 +1,29 @@
+---
+- hosts: all
+  become: true
+  pre_tasks:
+    - name: Update cache if needed.
+      yum: 
+        name: cache
+        state: present
+  handlers:
+    - name: restart apache
+      service:
+        name: apache
+        state: restarted
+  tasks:
+    - name: Ensure the packages were installed
+      yum:
+        name: "{{ packages }}"
+        state: present
+      vars:
+        packages:
+        - git
+        - curl
+        - unzip
+        - sendmail
+        - apache2
+        - php7.1-common
+        - php7.1-dev
+        - php7.1-gd
+        - php7.1-json
