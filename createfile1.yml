@@ -1,7 +1,9 @@
 ---
 - name: create a file in /tmp
   hosts: all
-  copy:
-    dest: /tmp/newfile
-    content: "A line is added to thf file"
-    
+  vars: 
+    content_file: "A line is added to the file"
+  tasks: 
+  - copy:
+      dest: /tmp/newfile
+      content: "{{ content_file }}"
