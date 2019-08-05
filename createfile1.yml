@@ -1,0 +1,7 @@
+---
+- name: create a file in /tmp
+  hosts: all
+  copy:
+    dest: /tmp/newfile
+    content: "A line is added to thf file"
+    
