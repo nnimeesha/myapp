@@ -6,5 +6,4 @@
   tasks: 
   - copy:
       dest: /tmp/newfile
-      content: "{{ content_file }}" and {{ ansible_hostname }}, {{ ansible_nodename }}
-     
+      content: "{{ content_file }} and {{ ansible_hostname }}, {{ ansible_nodename }}"
