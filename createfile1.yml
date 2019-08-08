@@ -1,0 +1,9 @@
+---
+- name: create a file in /tmp
+  hosts: all
+  vars: 
+    content_file: "A line is added to the file"
+  tasks: 
+  - copy:
+      dest: /tmp/newfile
+      content: "{{ content_file }} and {{ ansible_hostname }}, {{ ansible_nodename }}"
