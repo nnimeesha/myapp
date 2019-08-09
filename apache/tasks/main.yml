@@ -1,6 +1,6 @@
 ---
 - hosts: all
-- import_tasks: install.yml
-- import_tasks: configure.yml
-- import_tasks: service.yml
-- import_tasks: handlers.yml
+    - import_tasks: install.yml
+    - import_tasks: configure.yml
+    - import_tasks: service.yml
+    - import_tasks: handlers.yml
