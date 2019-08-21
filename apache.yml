@@ -12,6 +12,6 @@
     - name: Ensure apache started
       service:
         name: httpd
-        state: started
-        enabled: yes
+        state: stopped
+        enabled: no
  
