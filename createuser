@@ -1,0 +1,15 @@
+---
+hosts: all
+become: yes
+tasks:
+  - name: Adding new user to the group
+    group:
+      name: cms
+      gid: 1213
+      state: present
+  - name: Adding new user
+    user:
+      name: cmsadmin
+      comment: cmsadmin
+      uid: 1312
+      group: cms
