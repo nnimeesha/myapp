@@ -1,14 +1,8 @@
 ---
-<<<<<<< HEAD
+
 # tasks file for apache
 tasks:
    - import_tasks: install.yml
    - import_tasks: configure.yml
    - import_tasks: service.yml
    - import_tasks: handlers.yml
-=======
-- include: install.yml
-- include: configure.yml
-- include: handlers.yml
-- include: service.yml
->>>>>>> 6220cc426103cf64f2c0fb29b9dd78a00aa4b148
