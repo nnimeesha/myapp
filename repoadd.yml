@@ -1,0 +1,8 @@
+---
+- hosts: app
+  become: yes
+  tasks:
+    - name: Install epel repo
+      yum: name=epel-release state=present
+    - name: Ensure the firewalld is stopped
+      service: name=firewalld state=stopped
