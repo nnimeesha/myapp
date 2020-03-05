@@ -1,0 +1,3 @@
+---
+# vars file for ntpserverconf
+ntpserver: 27.124.125.251

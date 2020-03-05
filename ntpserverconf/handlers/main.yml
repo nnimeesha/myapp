@@ -1,0 +1,4 @@
+---
+# handlers file for ntpserverconf
+- name: restart ntp service
+  service: name=ntpd state=started
